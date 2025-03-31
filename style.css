@@ -1,0 +1,550 @@
+@charset "UTF-8";
+
+/*Fonte importada do google fonts*/
+
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Media query para tornar o site responsivo para telas pequenas como celulares */
+
+@media (max-width: 700px) {
+    .button-container {
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    #inicio {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #foto-juan {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    #mini-texto {
+        text-align: center;
+    }
+}
+
+/* Configuração padrão de cores e fontes */
+
+:root {
+    --cor0: #f3f3ef;
+    --cor1: #172751;
+    --cor2: #d1ccbd;
+    --cor3: #a7aba1;
+    --cor4: #707070;
+
+    --fonte-padrao: 'Exo 2', Arial, sans-serif;
+}
+
+/* Seletor universal */
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-image:linear-gradient(to top right, #a7aba1, #f3f3ef, #a7aba1, #f3f3ef) ;
+    font-family: var(--fonte-padrao);
+}
+
+h1 {
+    color: var(--cor1);
+    text-align: center;
+}
+
+h2 {
+    color: var(--cor1);
+    text-align: center;
+    font-size: 30px;
+}
+
+h3 {
+    color: var(--cor1);
+    text-align: center;
+    font-size: 1.6em;
+    margin: 40px;
+}
+
+p {
+    font-size: 21px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+a {
+    color: var(--cor3);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--cor2);
+}
+
+/* Conjunto de botões no topo da tela (menu) */
+
+#cabecalho {
+    display: flex;
+    justify-content: space-between; /* Distribui ao máximo dentro do cabeçalho */
+    align-items: center;
+    padding: 20px 20px;
+    background-color: var(--cor3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* coloca um sombreamneto na caixa */
+}
+
+#nome-juan {
+    font-size: 1.5em;
+    font-weight: bolder;
+    color: var(--cor1);
+    margin-right: 15px;
+}
+
+.button-container {
+    display: flex; /* Organiza os botões em linha */
+    gap: 15px; /* Define um espaçamento entre os botões */
+}
+
+.btn {
+    background-color: var(--cor1);
+    color: var(--cor0);
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s; /* Suaviza a transição de cores ao passar o mouse */
+}
+
+.btn:hover {
+    background-color: var(--cor2);
+    color: var(--cor1);
+}
+
+/* Conteúdo principal do "Sobre Mim" */
+
+#inicio {
+    display: flex; /* Permite a organização flexível dos elementos */
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que os elementos quebrem linha caso o espaço seja pequeno */
+    gap: 20px;
+}
+
+#foto-juan {
+    max-width: 30%; /* Faz com que os botões ocupem a porcetagem indicada */
+    height: auto;
+    flex-shrink: 0; /* Garante que a imagem não reduza seu tamanho ao ser empurrada por outros elementos flexíveis */
+    margin: 50px;
+}
+
+#mini-texto {
+    flex: 1; /* Faz o item ocupar o espaço disponível */
+    min-width: 200px;
+    max-width: 700px;
+    margin: 50px;
+}
+
+#mini-texto h2 {
+    margin-bottom: 15px;
+}
+
+#mini-texto p {
+    margin: 0;
+}
+
+/* Botões solo */
+
+.btn-solo {
+    display: inline-block; /* Exibe o botão como um bloco em linha */
+    min-width: 120px;
+    margin: 0 auto;
+    background-color: var(--cor1);
+    color: var(--cor0);
+    padding: 10px 20px;
+    border-radius: 5px; /* arrendonda as bordas do botão */
+    text-decoration: none; /* Exibe o botão como um bloco em linha */
+    transition: 0.3s; /* Tempo de duraçõo para a transição para o hover */
+}
+
+.btn-solo:hover {
+    background-color: var(--cor2);
+    color: var(--cor1);
+}
+
+.button-wrapper {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#seta {
+    text-align: center;
+    font-size: 2.7em;
+    margin-bottom: 40px;
+}
+
+/* Conteúdo das imagens do "Sobre Mim" */
+
+#area-academica {
+    text-align: center;
+}
+
+#img-AA {
+    width: 50%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+#paixoes {
+    text-align: center;
+}
+
+#img-paixoes {
+    width: 52%;
+    height: auto;
+    margin-top: 50px;
+    margin-bottom: 15px;
+}
+
+#projetos {
+    text-align: center;
+}
+
+#img-projetos {
+    width: 52%;
+    height: auto;
+    margin-top: 50px;
+    margin-bottom: 15px;
+}
+
+#novidades {
+    text-align: center;
+}
+
+#img-novidade {
+    width: 52%;
+    height: auto;
+    margin-top: 50px;
+    margin-bottom: 15px;
+}
+
+#contato {
+    text-align: center;
+}
+
+#img-contato {
+    width: 52%;
+    height: auto;
+    margin-top: 50px;
+    margin-bottom: 15px;
+}
+
+/* Rodapé */
+
+footer {
+    background-color: var(--cor3);
+}
+
+footer p {
+    margin-top: 40px;
+}
+
+footer a {
+    color: var(--cor1);
+}
+
+/* Página "área acadêmica" */
+
+#inicio-aa h2 {
+    margin: 30px;
+    text-align: center;
+    font-size: 40px;
+}
+
+#inicio-aa p {
+    margin-bottom: 20px;
+}
+
+hr {
+    height: 3px;
+    border: none;
+    background-color: black;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+ul {
+    text-align: center;
+}
+
+.topicos {
+    font-size: 32px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#espacamento {
+    margin-bottom: 20px;
+}
+
+#futuro-acad {
+    max-width: 1000px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* Página "Paixoes" */
+
+#inicio-paixoes h2 {
+    margin: 30px;
+    text-align: center;
+    font-size: 40px;
+}
+
+#inicio-paixoes p {
+    margin-bottom: 40px;
+}
+
+.p-titulos {
+    margin-bottom: 150px;
+}
+
+.p-titulos h3 {
+    font-size: 30px;
+    margin-top: 100px;
+}
+
+.conteudo-paixoes {
+    position: relative; /* Necessário para o uso do overlay */
+    width: 100%;
+    max-width: 1000px;
+    text-align: center;
+    margin: 0 auto; /* Centraliza o ".conteudo-paixoes" */
+}
+
+.imagem {
+    width: 100%;
+    height: auto;
+    display: block; /* Faz com que toda o espaço seja ocupado */
+}
+
+/* Estiliza o texto que aparece sobreposto à imagem */
+.overlay {
+    position: absolute; /* Permite o posicionamento sobre a imagem */
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Garante que fique no centro */
+    color: #fff;
+    font-size: 30px;
+    font-family: var(--fonte-padrao);
+    text-align: center;
+    color: var(--cor0);
+    opacity: 0; /* Torna o overlay invisível inicialmente */
+    transition: opacity 1.3s ease; /* Faz a transição de opacidade suave */
+    z-index: 1; /* Garante que o overlay fique acima da imagem */
+}
+
+.conteudo-paixoes:hover .imagem {
+    filter: blur(10px);  /* Aplica um desfoque de 10px */
+}
+
+.conteudo-paixoes:hover .overlay {
+    opacity: 1; /* Torna o overlay visível */
+}
+
+/*Inicio da página projetos*/
+
+#inicio-proj h2 {
+    margin: 30px;
+    text-align: center;
+    font-size: 40px;
+}
+
+#inicio-proj p {
+    margin-bottom: 40px;
+}
+
+.proj-conteudo {
+    text-align: center;
+    display: flex; /* Utiliza um layout flexível */
+    flex-direction: column; /* Organiza os itens em coluna */
+    align-items: center; /* Centraliza os itens no eixo horizontal */
+    margin-bottom: 50px;
+    justify-content: center; /* Centraliza os itens no eixo vertical */
+}
+
+.proj-conteudo p {
+    background-color: var(--cor3);
+    max-width: 1100px;
+    margin-top: 50px;
+    border-radius: 20px; /* deixa a caixa com bordas arrendondadas */
+    margin-left: 5px;
+    margin-right: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); 
+}
+
+#img-DC {
+    width: 50%;
+    height: auto;
+}
+
+#img-form {
+    width: 50%;
+    height: auto;
+    margin-top: 50px;
+}
+
+#proj-fim {
+    margin-top: 50px;
+    font-size: 30px;
+}
+
+#proj-fim a {
+    color: var(--cor1);
+    background-color: #1727513d;
+
+}
+
+/* Inicio da página "Novidades" */
+
+#inicio-nov h2 {
+    margin: 30px;
+    text-align: center;
+    font-size: 40px;
+}
+
+#inicio-nov p {
+    margin-bottom: 40px;
+}
+
+.novidades {
+    background-color: var(--cor4);
+    border-radius: 10px;
+    border-style: var(--cor1);
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-bottom: 50px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.novidades h4 {
+    font-size: 27px;
+    color: var(--cor0);
+    text-align: center;
+}
+
+.novidades p {
+    text-align: center;
+    font-size: 22px;
+}
+
+#data-novidades {
+    font-size: 15px;
+    color: var(--cor0);
+    margin-top: 5px;
+}
+
+#img-nov {
+    display: block;
+    margin: 0 auto;
+    width: 20%;
+    padding: 5px;
+}
+
+#nov-fim {
+    color: var(--cor1);
+}
+
+/* Inicio da página "Contato" */
+
+#novo-fundo {
+    background-color: var(--cor3);
+    padding: 30px;
+    border: 3px solid var(--cor4);
+    border-radius: 25px;
+    width: 80%;
+    max-width: 1000px;
+    margin: 50px auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+#contato h2 {
+    margin: 30px;
+    text-align: center;
+    font-size: 40px;
+}
+
+#contato p {
+    margin-bottom: 40px;
+}
+
+.links {
+    margin-bottom: 25px;
+}
+
+.links p {
+    font-size: 40px;
+}
+
+.links a {
+    text-decoration: none;
+    color: black;
+}
+
+.icons-cont {
+    width: 5%; /* largura dos icones */
+}
+
+.icons-cont-espaco {
+    width: 5%; /* largura dos icones */
+    margin-left: 10px;
+}
+
+#formulario-contato {
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    margin: 0 auto;  /* Centraliza o formulário */
+    gap: 15px; /* Espaço entre os elementos do formulário */
+    background-color: var(--cor4);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+#formulario-contato input {
+    padding: 10px;
+    border: 1px solid var(--cor2);
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+#formulario-contato textarea {
+    padding: 10px;
+    border: 1px solid var(--cor2);
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+#formulario-contato label {
+    color: var(--cor1);
+    font-weight: bolder;
+}
+
+#formulario-contato .btn-solo {
+    margin-top: 10px;
+}
+
+/* 
+    Fim do Projeto
+
+    Adorei fazer esse site e me desafiei bastante nele, foram mais de 24 dedicadas a ele, mas o final me surpreendeu bastante, fiquei muito feliz. É o primeiro projeto realmente "grande" que eu faço, é legal demais ver que isso foi criado por mim.
+
+*/
